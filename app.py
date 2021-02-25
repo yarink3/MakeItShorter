@@ -36,7 +36,7 @@ def create_info_collection():
     info_doc = info_ref.get()
     if(info_doc.exists==False):
         data = {
-        u"SITE_PREFIX" : "localhost:5000/",
+        u"SITE_PREFIX" : "shorter-url1.herokuapp.com/",
         u"numOfUrls" : 0,
         u"redirectionsSoFar": 0,
         u"True_Redirects" : 0 , 
