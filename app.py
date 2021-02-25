@@ -187,7 +187,9 @@ def handle_form():
 
 
     pre="Short URL for the one you entered: "
-
+    # urlToReturn="shorter-url1.herokuapp.com/ya1"
+    start=urlToReturn.find(".herokuapp.")
+    urlToReturn=urlToReturn[start+15: len(urlToReturn)]
     return render_template('index.html',prefix=pre,short_Url=urlToReturn)
 
 
