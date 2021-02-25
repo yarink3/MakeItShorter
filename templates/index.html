@@ -1,0 +1,158 @@
+<!Doctype html>
+<html lang="en">
+
+    <head>
+        <title> Make It Shorter </title>
+    </head>
+
+    <body>
+      <header>
+          <h1>Welcome to "Make It Shorter" !</h1>
+      </header>
+
+            <div class="row">
+                <h2> Here we can supply a short URL just for you</h2>
+            </div>
+
+                <form method="post" action="handle_form" class="contact-form" enctype="multipart/form-data" >
+                    <div class="row">
+                        <div class="one" >
+                        <label  >The long URL:</label>
+                        </div>
+
+                        <div >
+                            <input class="one"  type="url" name="urlEntered" placeholder="Add or paste the URL here please... (for example:https://www.example.com/)" required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                        </div>
+
+                        <div >
+                            <input type="submit" value="MAKE IT SHORTER!">
+                        </div>
+                        <label>&nbsp;</label>
+                        <div class="three">{{prefix}} <a href={{short_Url}} class="three"> {{short_Url}}</a> </div>
+
+                  
+
+
+                    </div>
+                </form>
+
+    </body>
+     
+</html>
+    
+
+<style>
+
+/* --------------*/
+/* BASIC SETUP */
+/*--------------*/
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    
+    background-color: white;
+    color: #5a5656;
+    font-family: 'Lato','Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+header{
+    text-align: center
+}
+
+
+
+
+/* --------------*/
+/* REUSABLE COMPONENTS */
+/*--------------*/
+
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.one{
+    width: 100%;
+}
+/* -------HEADINGS--------- */
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: orange;
+    content: "";
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/*----- FORM-----*/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=url]{
+   height: 35px;
+}
+
+input[type=submit] {
+    display: inline-block ;
+    padding: 10px  30px  ;
+    color: aliceblue;
+    font-weight: 300;
+    font-size: 90%;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 1s, border 1s, color 1s;
+}
+
+input[type=submit] {
+    background-color: orange;
+    border: 1px solid orange;
+    margin-right: 15px;
+    color: #fff;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active{
+background-color: rgba(0, 157, 255, 0.78);
+}
+
+</style>
