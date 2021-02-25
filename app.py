@@ -193,5 +193,5 @@ def handle_form():
 
 if __name__ == '__main__':
 #     createTable()
-    create_info_collection()
+    # create_info_collection()
     app.run()
