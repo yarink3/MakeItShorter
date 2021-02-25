@@ -50,6 +50,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    return "<h1>Welcome to our server !!</h1>"
     short_Url=""
     pre=""
     return render_template('index.html',prefix=pre,short_Url=short_Url)
@@ -63,7 +64,7 @@ def get_url_or_None(urls_docs,URL_ENTERED):
 
     return None
 
-@app.route('/<shortOne>')
+# @app.route('/<shortOne>')
 def findPathInDb(shortOne):
     info = info_ref.get()
     info_dict= info.to_dict()
@@ -158,7 +159,7 @@ def stats():
 
 
 
-@app.route('/handle_form', methods=['POST'])
+# @app.route('/handle_form', methods=['POST'])
 def handle_form():
     # _conn = sqlite3.connect('urls1.db')  # connect to the database
     # cur = _conn.cursor()
